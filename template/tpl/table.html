@@ -1,0 +1,17 @@
+{% extends "main.html" %}
+
+{% block content %}
+<h3>{{date}}</h3>
+<table class="table table-bordered table-hover">
+  <tr>
+    <th>#</th>
+    <th>links</th>
+  </tr>
+  {% for key, el in links %}
+  <tr>
+    <td>{{key+1}}</td>
+    <td><a target="_blank" href="{{el.href}}">{{el.title}}</a></td>
+  </tr> 
+  {% endfor %}
+</table>
+{% endblock %}
